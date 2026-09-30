@@ -18,7 +18,8 @@ Used by the `triage-agent` demo to read error rates and latency from
 podman build -t quay.io/sovereign-selfheal/prometheus-mcp-server:<tag> .
 ```
 
-CI (`.github/workflows/build.yml`) does this on every `v*` tag.
+CI (`.github/workflows/build.yml`) runs on pull requests and pushes to `main` to verify
+that this image builds (no push). Quay builds/pushes the tagged release image separately.
 
 ## Consumer
 
